@@ -19,7 +19,8 @@ class _InputPageState extends State<InputPage> {
           Expanded(
             child: Row(
               children: [
-                Expanded(child: ReusableCard(),
+                Expanded(
+                  child: ReusableCard(),
                 ),
                 Expanded(child: ReusableCard())
               ],
@@ -30,7 +31,7 @@ class _InputPageState extends State<InputPage> {
             child: Row(
               children: [
                 Expanded(child: ReusableCard()),
-                Expanded(child: ReusableCard())
+                Expanded(child: ReusableCard(colour: Colors.white,))
               ],
             ),
           ),
@@ -41,16 +42,19 @@ class _InputPageState extends State<InputPage> {
 }
 
 class ReusableCard extends StatelessWidget {
-  const ReusableCard({
-    super.key,
-  });
+  final Color colour; // Déclarez la variable d'instance ici comme non-nullable
+
+  // Corrigez le constructeur pour initialiser correctement le champ avec une valeur par défaut
+  ReusableCard({this.colour = const Color(0xFF1D1E33)});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.all(15.0),
       decoration: BoxDecoration(
-          color: Color(0xFF1D1E33), borderRadius: BorderRadius.circular(10.0)),
+          color: colour, 
+          borderRadius: BorderRadius.circular(10.0)),
     );
   }
 }
+// Color(0xFF1D1E33)
