@@ -25,6 +25,17 @@ class InputPage extends StatefulWidget {
 class _InputPageState extends State<InputPage> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("IMC CALCULATEUR") ,
+      ),
+      body:Center(
+        child: Text('Text Body'),
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add),
+        onPressed: (){},
+        ),
+    );
   }
 }
