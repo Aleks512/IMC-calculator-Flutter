@@ -9,7 +9,8 @@ class IMCalculateur extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
+      theme: ThemeData.dark(),
       home: InputPage(), // Correction: placez cette ligne à l'intérieur du MaterialApp.
     );
   }
