@@ -8,10 +8,17 @@ void main() {
 class IMCalculateur extends StatelessWidget {
   const IMCalculateur({super.key});
 
-  @override
+   @override
   Widget build(BuildContext context) {
-    return MaterialApp(theme: ThemeData.dark().copyWith(scaffoldBackgroundColor:Color(0xFF0A0E21)),
-     home: InputPage());
+    return MaterialApp(
+      theme: ThemeData.dark().copyWith(
+        scaffoldBackgroundColor: Color(0xFF0A0E21),
+        floatingActionButtonTheme: FloatingActionButtonThemeData(
+          backgroundColor: Color.fromARGB(255, 240, 57, 6),
+        ),
+      ),
+      home: InputPage(),
+    );
   }
 }
 
@@ -32,12 +39,9 @@ class _InputPageState extends State<InputPage> {
       body: const Center(
         child: Text("Aleksandra super Dev"),
       ),
-      floatingActionButton: Theme(
-        data: ThemeData(colorSchemeSeed: Color.fromARGB(255, 240, 57, 6)),
-        child: FloatingActionButton(
-          child: const Icon(Icons.add),
-          onPressed: () {},
-        ),
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(Icons.add),
+        onPressed: () {},
       ),
     );
   }
