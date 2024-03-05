@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import 'input_page.dart';
 
 void main() {
   runApp(const IMCalculateur());
@@ -8,41 +8,17 @@ void main() {
 class IMCalculateur extends StatelessWidget {
   const IMCalculateur({super.key});
 
-   @override
+  @override
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData.dark().copyWith(
-        scaffoldBackgroundColor: Color(0xFF0A0E21),
-        floatingActionButtonTheme: FloatingActionButtonThemeData(
+        scaffoldBackgroundColor: const Color(0xFF0A0E32),
+        floatingActionButtonTheme: const FloatingActionButtonThemeData(
           backgroundColor: Color.fromARGB(255, 240, 57, 6),
         ),
+        appBarTheme: const AppBarTheme(backgroundColor:Color(0xFF0A0E23) )
       ),
-      home: InputPage(),
-    );
-  }
-}
-
-class InputPage extends StatefulWidget {
-  const InputPage({super.key});
-
-  @override
-  State<InputPage> createState() => _InputPageState();
-}
-
-class _InputPageState extends State<InputPage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text("IMC CALCULATEUR"),
-      ),
-      body: const Center(
-        child: Text("Aleksandra super Dev"),
-      ),
-      floatingActionButton: FloatingActionButton(
-        child: const Icon(Icons.add),
-        onPressed: () {},
-      ),
+      home: const InputPage(),
     );
   }
 }
