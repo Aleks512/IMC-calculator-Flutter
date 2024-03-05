@@ -10,23 +10,8 @@ class IMCalculateur extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(
-        scaffoldBackgroundColor: Color.fromARGB(255, 2, 36, 3),
-        appBarTheme: AppBarTheme(
-          backgroundColor: Color.fromARGB(93, 14, 40, 14), // Définissez explicitement la couleur de fond de l'AppBar
-        ),
-        useMaterial3: true,
-        // Define the default brightness and colors.
-        colorScheme: ColorScheme.fromSeed(
-          primary: Color.fromARGB(255, 115, 93, 78),
-          seedColor: Color.fromARGB(255, 78, 115, 79),
-          brightness: Brightness.dark,    
-        ),
-      ),
-      home:
-          InputPage(), // Correction: placez cette ligne à l'intérieur du MaterialApp.
-    );
+    return MaterialApp(theme: ThemeData.dark().copyWith(scaffoldBackgroundColor:Color(0xFF0A0E21)),
+     home: InputPage());
   }
 }
 
@@ -47,9 +32,12 @@ class _InputPageState extends State<InputPage> {
       body: const Center(
         child: Text("Aleksandra super Dev"),
       ),
-      floatingActionButton: FloatingActionButton(
-        child: const Icon(Icons.add),
-        onPressed: () {},
+      floatingActionButton: Theme(
+        data: ThemeData(colorSchemeSeed: Color.fromARGB(255, 240, 57, 6)),
+        child: FloatingActionButton(
+          child: const Icon(Icons.add),
+          onPressed: () {},
+        ),
       ),
     );
   }
