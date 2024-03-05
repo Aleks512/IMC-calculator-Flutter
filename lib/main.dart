@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 void main() {
   runApp(const IMCalculateur());
@@ -10,8 +11,21 @@ class IMCalculateur extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData.dark(),
-      home: InputPage(), // Correction: placez cette ligne à l'intérieur du MaterialApp.
+      theme: ThemeData(
+        scaffoldBackgroundColor: Color.fromARGB(255, 2, 36, 3),
+        appBarTheme: AppBarTheme(
+          backgroundColor: Color.fromARGB(93, 14, 40, 14), // Définissez explicitement la couleur de fond de l'AppBar
+        ),
+        useMaterial3: true,
+        // Define the default brightness and colors.
+        colorScheme: ColorScheme.fromSeed(
+          primary: Color.fromARGB(255, 115, 93, 78),
+          seedColor: Color.fromARGB(255, 78, 115, 79),
+          brightness: Brightness.dark,    
+        ),
+      ),
+      home:
+          InputPage(), // Correction: placez cette ligne à l'intérieur du MaterialApp.
     );
   }
 }
@@ -31,7 +45,7 @@ class _InputPageState extends State<InputPage> {
         title: const Text("IMC CALCULATEUR"),
       ),
       body: const Center(
-        child: Text('Text Body2'),
+        child: Text("Aleksandra super Dev"),
       ),
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.add),
