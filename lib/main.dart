@@ -9,11 +9,9 @@ class IMCalculateur extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(),
-      darkTheme: ThemeData.dark(),
+    return const MaterialApp(
+      home: InputPage(), // Correction: placez cette ligne à l'intérieur du MaterialApp.
     );
-    home:InputPage();
   }
 }
 
@@ -29,13 +27,13 @@ class _InputPageState extends State<InputPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("IMC CALCULATEUR"),
+        title: const Text("IMC CALCULATEUR"),
       ),
-      body: Center(
+      body: const Center(
         child: Text('Text Body2'),
       ),
       floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
         onPressed: () {},
       ),
     );
