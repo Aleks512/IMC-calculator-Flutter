@@ -57,9 +57,9 @@ class _InputPageState extends State<InputPage> {
 
 class ReusableCard extends StatelessWidget {
   final Color colour; // Déclarez la variable d'instance ici comme non-nullable
-
+  final Widget? cardChild;
   // Corrigez le constructeur pour initialiser correctement le champ avec une valeur par défaut
-  ReusableCard({this.colour = reusableCardsColor});
+  ReusableCard({this.colour = reusableCardsColor, this.cardChild});
 
   @override
   Widget build(BuildContext context) {
