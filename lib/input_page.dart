@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 const bottomContainerHeight = 80.0;
 const bottomContainerColor = Color.fromARGB(255, 224, 175, 41);
@@ -57,7 +58,7 @@ class _InputPageState extends State<InputPage> {
 
 class ReusableCard extends StatelessWidget {
   final Color colour; // Déclarez la variable d'instance ici comme non-nullable
-  final Widget? cardChild;
+  final Widget? cardChild; //custom widget
   // Corrigez le constructeur pour initialiser correctement le champ avec une valeur par défaut
   ReusableCard({this.colour = reusableCardsColor, this.cardChild});
 
