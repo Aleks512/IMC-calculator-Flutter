@@ -26,7 +26,22 @@ class _InputPageState extends State<InputPage> {
             child: Row(
               children: [
                 Expanded(
-                  child: ReusableCard(),
+                  child: ReusableCard(
+                    cardChild: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(FontAwesomeIcons.mars, size: 80.0),
+                        SizedBox(height: 80.0),
+                        Text(
+                          "HOMME",
+                          style: TextStyle(
+                            fontSize: 18,
+                            color: bottomContainerColor,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
                 ),
                 Expanded(child: ReusableCard())
               ],
@@ -66,6 +81,7 @@ class ReusableCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.all(15.0),
+      child: cardChild, // Ajoutez cette ligne
       decoration: BoxDecoration(
           color: colour, borderRadius: BorderRadius.circular(10.0)),
     );
