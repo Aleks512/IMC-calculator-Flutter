@@ -58,7 +58,7 @@ class _InputPageState extends State<InputPage> {
                       );
                     },
                     child: ReusableCard(
-                      colour: femaleCardColor,
+                      colour: maleCardColor,
                       cardHeight: 30,
                       cardChild: CustomColumnContent(
                         customText: maleText,
@@ -77,7 +77,7 @@ class _InputPageState extends State<InputPage> {
                     );
                   },
                   child: ReusableCard(
-                    colour: maleCardColor,
+                    colour: femaleCardColor,
                     cardChild: CustomColumnContent(
                         customIcon: femaleIcon, customText: femaleText),
                   ),
