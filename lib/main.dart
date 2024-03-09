@@ -12,10 +12,7 @@ class IMCalculateur extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData.dark().copyWith(
-        scaffoldBackgroundColor: const Color(0xFF0A0E32),
-        floatingActionButtonTheme: const FloatingActionButtonThemeData(
-          backgroundColor: Color.fromARGB(255, 240, 57, 6),
-        ),
+        scaffoldBackgroundColor: Color(0xFF0A0E32),
         appBarTheme: const AppBarTheme(backgroundColor:Color(0xFF0A0E23) )
       ),
       home: const InputPage(),

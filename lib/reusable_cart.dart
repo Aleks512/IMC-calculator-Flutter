@@ -2,16 +2,17 @@ import 'package:flutter/material.dart';
 
 const bottomContainerHeight = 80.0;
 const bottomContainerColor = Color.fromARGB(255, 224, 175, 41);
-const reusableCardsColor = Color(0xFF1D1E33);
+const inactiveCardsColor = Color(0xFF1D1E33);
+const reusableCardsColor = Color(0xFF0A0E23);
 
 class ReusableCard extends StatelessWidget {
-  final Color colour; // Déclarez la variable d'instance ici comme non-nullable
+  final Color? colour; // Déclarez la variable d'instance ici comme non-nullable
   final Widget? cardChild; //custom widget
   final double? cardHeight;
   // Corrigez le constructeur pour initialiser correctement le champ avec une valeur par défaut
   const ReusableCard(
       {super.key,
-      this.colour = reusableCardsColor,
+      this.colour,
       this.cardChild,
       this.cardHeight});
 
