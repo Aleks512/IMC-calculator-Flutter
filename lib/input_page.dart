@@ -3,8 +3,9 @@ import 'custom_col_content.dart';
 import 'reusable_cart.dart';
 
 const bottomContainerColor = Color.fromARGB(255, 224, 175, 41);
+
 // use enum instead of int when u have more then 1 options
-enum Gender{male, female} // 1 enum declaration 
+enum Gender { male, female } // 1 enum declaration
 
 class InputPage extends StatefulWidget {
   const InputPage({super.key});
@@ -14,30 +15,7 @@ class InputPage extends StatefulWidget {
 }
 
 class _InputPageState extends State<InputPage> {
-  Color maleCardColor = inactiveCardsColor;
-  Color femaleCardColor = inactiveCardsColor;
-
-  void updateColour(Gender gender) { // 2 enum pass as param to function
-    if (gender == Gender.male) { // 3. enum chosse option
-      if (maleCardColor == inactiveCardsColor) {
-        maleCardColor = reusableCardsColor;
-        femaleCardColor = inactiveCardsColor;
-        print(gender);
-      } else {
-        maleCardColor = inactiveCardsColor;
-      }
-    }
-
-    if (gender == Gender.female) {
-      if (femaleCardColor == inactiveCardsColor) {
-        femaleCardColor = reusableCardsColor;
-        maleCardColor = inactiveCardsColor;
-        print(gender);
-      } else {
-        femaleCardColor = inactiveCardsColor;
-      }
-    }
-  }
+  Gender? selectedGender;
 
   @override
   Widget build(BuildContext context) {
@@ -55,12 +33,12 @@ class _InputPageState extends State<InputPage> {
                     onTap: () {
                       setState(
                         () {
-                          updateColour(Gender.male);
+                          selectedGender = Gender.male;
                         },
                       );
                     },
                     child: ReusableCard(
-                      colour: maleCardColor,
+                      colour: selectedGender == Gender.male?reusableCardsColor:inactiveCardsColor,
                       cardHeight: 30,
                       cardChild: CustomColumnContent(
                         customText: maleText,
@@ -74,12 +52,12 @@ class _InputPageState extends State<InputPage> {
                   onTap: () {
                     setState(
                       () {
-                        updateColour(Gender.female);
+                        selectedGender = Gender.female;
                       },
                     );
                   },
                   child: ReusableCard(
-                    colour: femaleCardColor,
+                    colour: selectedGender == Gender.female?reusableCardsColor:inactiveCardsColor,
                     cardChild: CustomColumnContent(
                         customIcon: femaleIcon, customText: femaleText),
                   ),
@@ -96,7 +74,7 @@ class _InputPageState extends State<InputPage> {
               children: [
                 Expanded(
                     child: ReusableCard(
-                  colour:reusableCardsColor,
+                  colour: reusableCardsColor,
                 )),
                 Expanded(
                   child: ReusableCard(
@@ -117,7 +95,5 @@ class _InputPageState extends State<InputPage> {
     );
   }
 }
-
-
 
 // Color(0xFF1D1E33)
