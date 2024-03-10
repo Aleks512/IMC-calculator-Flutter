@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'constants.dart';
 
-const maleIcon = FontAwesomeIcons.mars;
-const femaleIcon = FontAwesomeIcons.venus;
-const femaleText = "FEMME";
-const maleText = "HOMME";
-const bottomContainerColor = Color.fromARGB(255, 224, 175, 41);
 class CustomColumnContent extends StatelessWidget {
   final IconData customIcon;
   final String customText;

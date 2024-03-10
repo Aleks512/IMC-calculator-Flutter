@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'custom_col_content.dart';
 import 'reusable_cart.dart';
-
-const bottomContainerColor = Color.fromARGB(255, 224, 175, 41);
+import 'constants.dart';
 
 // use enum instead of int when u have more then 1 options
 enum Gender { male, female } // 1 enum declaration
