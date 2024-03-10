@@ -29,38 +29,34 @@ class _InputPageState extends State<InputPage> {
             child: Row(
               children: [
                 Expanded(
-                  child: GestureDetector(
-                    onTap: () {
-                      setState(
-                        () {
-                          selectedGender = Gender.male;
-                        },
-                      );
+                  child: ReusableCard(
+                    onPress: () {
+                      setState(() {
+                        selectedGender = Gender.male;
+                      });
                     },
-                    child: ReusableCard(
-                      colour: selectedGender == Gender.male?reusableCardsColor:inactiveCardsColor,
-                      cardHeight: 30,
-                      cardChild: CustomColumnContent(
-                        customText: maleText,
-                        customIcon: maleIcon,
-                      ),
+                    colour: selectedGender == Gender.male
+                        ? reusableCardsColor
+                        : inactiveCardsColor,
+                    cardHeight: 30,
+                    cardChild: CustomColumnContent(
+                      customText: maleText,
+                      customIcon: maleIcon,
                     ),
                   ),
                 ),
                 Expanded(
-                    child: GestureDetector(
-                  onTap: () {
-                    setState(
-                      () {
-                        selectedGender = Gender.female;
-                      },
-                    );
+                    child: ReusableCard(
+                  onPress: () {
+                    setState(() {
+                      selectedGender = Gender.female;
+                    });
                   },
-                  child: ReusableCard(
-                    colour: selectedGender == Gender.female?reusableCardsColor:inactiveCardsColor,
-                    cardChild: CustomColumnContent(
-                        customIcon: femaleIcon, customText: femaleText),
-                  ),
+                  colour: selectedGender == Gender.female
+                      ? reusableCardsColor
+                      : inactiveCardsColor,
+                  cardChild: CustomColumnContent(
+                      customIcon: femaleIcon, customText: femaleText),
                 ))
               ],
             ),
