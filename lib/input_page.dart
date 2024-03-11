@@ -35,12 +35,12 @@ class _InputPageState extends State<InputPage> {
                       });
                     },
                     colour: selectedGender == Gender.male
-                        ? reusableCardsColor
-                        : inactiveCardsColor,
+                        ? kReusableCardsColor
+                        : kInactiveCardsColor,
                     cardHeight: 30,
                     cardChild: CustomColumnContent(
-                      customText: maleText,
-                      customIcon: maleIcon,
+                      customText: kMaleText,
+                      customIcon: kMaleIcon,
                     ),
                   ),
                 ),
@@ -52,38 +52,39 @@ class _InputPageState extends State<InputPage> {
                     });
                   },
                   colour: selectedGender == Gender.female
-                      ? reusableCardsColor
-                      : inactiveCardsColor,
+                      ? kReusableCardsColor
+                      : kInactiveCardsColor,
                   cardChild: CustomColumnContent(
-                      customIcon: femaleIcon, customText: femaleText),
+                      customIcon: kMaleIcon, 
+                      customText: kFemaleText),
                 ))
               ],
             ),
           ),
           const Expanded(
               child: ReusableCard(
-            colour: reusableCardsColor,
+            colour: kReusableCardsColor,
           )),
           const Expanded(
             child: Row(
               children: [
                 Expanded(
                     child: ReusableCard(
-                  colour: reusableCardsColor,
+                  colour: kReusableCardsColor,
                 )),
                 Expanded(
                   child: ReusableCard(
-                    colour: reusableCardsColor,
+                    colour: kReusableCardsColor,
                   ),
                 )
               ],
             ),
           ),
           Container(
-            color: bottomContainerColor,
+            color: kBottomContainerColor,
             margin: const EdgeInsets.only(top: 10.0),
             width: double.infinity,
-            height: bottomContainerHeight,
+            height: kBottomContainerHeight,
           )
         ],
       ),

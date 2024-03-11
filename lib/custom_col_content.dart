@@ -18,10 +18,7 @@ class CustomColumnContent extends StatelessWidget {
         const SizedBox(height: 20.0),
         Text(
           customText,
-          style: const TextStyle(
-            fontSize: 18,
-            color: bottomContainerColor,
-          ),
+          style: kLabeltextStyle,
         ),
       ],
     );
