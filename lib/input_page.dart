@@ -23,6 +23,7 @@ class _InputPageState extends State<InputPage> {
         title: const Text("IMC CALCULATEUR"),
       ),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Expanded(
             child: Row(
@@ -63,6 +64,12 @@ class _InputPageState extends State<InputPage> {
           ),
           const Expanded(
               child: ReusableCard(
+                cardChild: Column(
+                  children: [
+                    Text('HEIGHT',
+                    style: kLabeltextStyle,)
+                  ],
+                ),
             colour: kReusableCardsColor,
           )),
           const Expanded(
