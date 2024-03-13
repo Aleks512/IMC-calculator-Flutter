@@ -15,6 +15,7 @@ class InputPage extends StatefulWidget {
 
 class _InputPageState extends State<InputPage> {
   Gender? selectedGender;
+  int height = 180;
 
   @override
   Widget build(BuildContext context) {
@@ -56,20 +57,51 @@ class _InputPageState extends State<InputPage> {
                       ? kReusableCardsColor
                       : kInactiveCardsColor,
                   cardChild: CustomColumnContent(
-                      customIcon: kMaleIcon, 
+                      customIcon: kFemaleIcon, 
                       customText: kFemaleText),
                 ))
               ],
             ),
           ),
-          const Expanded(
+          Expanded(
               child: ReusableCard(
-                cardChild: Column(
+            cardChild: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  'HEIGHT',
+                  style: kLabeltextStyle,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.baseline,
+                  textBaseline: TextBaseline.alphabetic,
                   children: [
-                    Text('HEIGHT',
-                    style: kLabeltextStyle,)
+                    Text(
+                      height.toString(),
+                      style: kNumberTextStyle,
+                    ),
+                    Text(
+                      'cm',
+                      style: kLabeltextStyle,
+                    )
                   ],
                 ),
+                Slider(
+                  value: height.toDouble(),
+                  min: 120,
+                  max: 220,
+                  activeColor: kBottomContainerColor,
+                  inactiveColor: kInactiveCardsColor,
+                  // newValue will be passed from slider to us
+                  onChanged: (double newValue) {
+                    setState(() {
+                      height = newValue.toInt();
+                    });  
+                  },
+                )
+              ],
+            ),
             colour: kReusableCardsColor,
           )),
           const Expanded(

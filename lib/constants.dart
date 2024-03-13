@@ -11,3 +11,4 @@ const kInactiveCardsColor = Color(0xFF1D1E33);
 const kReusableCardsColor = Color(0xFF0A0E23);
 
 const kLabeltextStyle = TextStyle(fontSize: 18, color: kBottomContainerColor);
+const kNumberTextStyle = TextStyle(fontWeight: FontWeight.w900,fontSize: 50,);
