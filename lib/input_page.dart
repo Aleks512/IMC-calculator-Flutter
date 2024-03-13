@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'custom_col_content.dart';
 import 'reusable_cart.dart';
 import 'constants.dart';
@@ -135,11 +136,13 @@ class _InputPageState extends State<InputPage> {
                               backgroundColor: kBottomContainerColor,
                               shape: const CircleBorder(),
                               child: const Icon(
-                                Icons.add,
+                                Icons.remove,
                                 color: Colors.white,
                               ),
                               onPressed: () {}),
-                          const RoundIconButton()
+                          const RoundIconButton(
+                            icon: FontAwesomeIcons.plus,
+                          )
                         ],
                       )
                     ],
@@ -169,8 +172,8 @@ class _InputPageState extends State<InputPage> {
 // Color(0xFF1D1E33)
 
 class RoundIconButton extends StatelessWidget {
-  final Widget? child;
-  const RoundIconButton({ super.key, this.child });
+  final IconData? icon;
+  const RoundIconButton({ super.key, this.icon });
 
    @override
    Widget build(BuildContext context) {
@@ -183,7 +186,7 @@ class RoundIconButton extends StatelessWidget {
         shape: const CircleBorder(),
         fillColor: kBottomContainerColor,
         onPressed: (){},
-        child: child,
+        child: Icon(icon),
        );
   }
 }
