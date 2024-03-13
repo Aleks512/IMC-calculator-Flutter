@@ -95,8 +95,10 @@ class _InputPageState extends State<InputPage> {
                     activeTrackColor: const Color.fromARGB(255, 244, 244, 244),
                     trackHeight: 1,
                     thumbColor: kBottomContainerColor,
-                    thumbShape: const RoundSliderThumbShape(enabledThumbRadius: 17),
-                    overlayShape: const RoundSliderOverlayShape(overlayRadius: 40),
+                    thumbShape:
+                        const RoundSliderThumbShape(enabledThumbRadius: 17),
+                    overlayShape:
+                        const RoundSliderOverlayShape(overlayRadius: 40),
                   ),
                   child: Slider(
                     value: height.toDouble(),
@@ -139,8 +141,17 @@ class _InputPageState extends State<InputPage> {
                                 Icons.remove,
                                 color: Colors.white,
                               ),
-                              onPressed: () {}),
-                          const RoundIconButton(
+                              onPressed: () {
+                                setState(() {
+                                  weight--;
+                                });
+                              }),
+                          RoundIconButton(
+                            onPressed: () {
+                              setState(() {
+                                weight++;
+                              });
+                            },
                             icon: FontAwesomeIcons.plus,
                           )
                         ],
@@ -172,21 +183,22 @@ class _InputPageState extends State<InputPage> {
 // Color(0xFF1D1E33)
 
 class RoundIconButton extends StatelessWidget {
+  final Function onPressed;
   final IconData? icon;
-  const RoundIconButton({ super.key, this.icon });
+  const RoundIconButton({super.key, this.icon, required this.onPressed});
 
-   @override
-   Widget build(BuildContext context) {
-       return RawMaterialButton(
-        elevation: 7,
-        constraints: const BoxConstraints.tightFor(
-          width:56,
-          height:56,
-        ),
-        shape: const CircleBorder(),
-        fillColor: kBottomContainerColor,
-        onPressed: (){},
-        child: Icon(icon),
-       );
+  @override
+  Widget build(BuildContext context) {
+    return RawMaterialButton(
+      elevation: 7,
+      constraints: const BoxConstraints.tightFor(
+        width: 56,
+        height: 56,
+      ),
+      shape: const CircleBorder(),
+      fillColor: kBottomContainerColor,
+      onPressed: onPressed as void Function(),
+      child: Icon(icon),
+    );
   }
 }
