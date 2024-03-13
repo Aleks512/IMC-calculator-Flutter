@@ -41,7 +41,7 @@ class _InputPageState extends State<InputPage> {
                         ? kReusableCardsColor
                         : kInactiveCardsColor,
                     cardHeight: 30,
-                    cardChild: CustomColumnContent(
+                    cardChild: const CustomColumnContent(
                       customText: kMaleText,
                       customIcon: kMaleIcon,
                     ),
@@ -57,7 +57,7 @@ class _InputPageState extends State<InputPage> {
                   colour: selectedGender == Gender.female
                       ? kReusableCardsColor
                       : kInactiveCardsColor,
-                  cardChild: CustomColumnContent(
+                  cardChild: const CustomColumnContent(
                       customIcon: kFemaleIcon, customText: kFemaleText),
                 ))
               ],
@@ -68,7 +68,7 @@ class _InputPageState extends State<InputPage> {
             cardChild: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(
+                const Text(
                   'HEIGHT',
                   style: kLabeltextStyle,
                 ),
@@ -81,7 +81,7 @@ class _InputPageState extends State<InputPage> {
                       height.toString(),
                       style: kNumberTextStyle,
                     ),
-                    Text(
+                    const Text(
                       'cm',
                       style: kLabeltextStyle,
                     )
@@ -94,8 +94,8 @@ class _InputPageState extends State<InputPage> {
                     activeTrackColor: const Color.fromARGB(255, 244, 244, 244),
                     trackHeight: 1,
                     thumbColor: kBottomContainerColor,
-                    thumbShape: RoundSliderThumbShape(enabledThumbRadius: 17),
-                    overlayShape: RoundSliderOverlayShape(overlayRadius: 40),
+                    thumbShape: const RoundSliderThumbShape(enabledThumbRadius: 17),
+                    overlayShape: const RoundSliderOverlayShape(overlayRadius: 40),
                   ),
                   child: Slider(
                     value: height.toDouble(),
@@ -120,7 +120,7 @@ class _InputPageState extends State<InputPage> {
                     child: ReusableCard(
                   cardChild: Column(
                     children: [
-                      Text(
+                      const Text(
                         'POIDS',
                         style: kLabeltextStyle,
                       ),
@@ -133,27 +133,20 @@ class _InputPageState extends State<InputPage> {
                         children: [
                           FloatingActionButton(
                               backgroundColor: kBottomContainerColor,
-                              shape: CircleBorder(),
-                              child: Icon(
+                              shape: const CircleBorder(),
+                              child: const Icon(
                                 Icons.add,
                                 color: Colors.white,
                               ),
                               onPressed: () {}),
-                          FloatingActionButton(
-                              backgroundColor: kBottomContainerColor,
-                              shape: CircleBorder(),
-                              child: Icon(
-                                Icons.add,
-                                color: Colors.white,
-                              ),
-                              onPressed: () {}),
+                          const RoundIconButton()
                         ],
                       )
                     ],
                   ),
                   colour: kReusableCardsColor,
                 )),
-                Expanded(
+                const Expanded(
                   child: ReusableCard(
                     colour: kReusableCardsColor,
                   ),
@@ -174,3 +167,23 @@ class _InputPageState extends State<InputPage> {
 }
 
 // Color(0xFF1D1E33)
+
+class RoundIconButton extends StatelessWidget {
+  final Widget? child;
+  const RoundIconButton({ super.key, this.child });
+
+   @override
+   Widget build(BuildContext context) {
+       return RawMaterialButton(
+        elevation: 7,
+        constraints: const BoxConstraints.tightFor(
+          width:56,
+          height:56,
+        ),
+        shape: const CircleBorder(),
+        fillColor: kBottomContainerColor,
+        onPressed: (){},
+        child: child,
+       );
+  }
+}
