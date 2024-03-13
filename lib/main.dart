@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:imc_calculateur/constants.dart';
 import 'input_page.dart';
 
 void main() {
@@ -12,7 +13,7 @@ class IMCalculateur extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData.dark().copyWith(
-        scaffoldBackgroundColor: Color(0xFF0A0E32),
+        scaffoldBackgroundColor: bodyColor,
         appBarTheme: const AppBarTheme(backgroundColor:Color(0xFF0A0E23) )
       ),
       home: const InputPage(),

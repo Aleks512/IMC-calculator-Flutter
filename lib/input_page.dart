@@ -16,6 +16,7 @@ class InputPage extends StatefulWidget {
 class _InputPageState extends State<InputPage> {
   Gender? selectedGender;
   int height = 180;
+  int weight = 60;
 
   @override
   Widget build(BuildContext context) {
@@ -57,8 +58,7 @@ class _InputPageState extends State<InputPage> {
                       ? kReusableCardsColor
                       : kInactiveCardsColor,
                   cardChild: CustomColumnContent(
-                      customIcon: kFemaleIcon, 
-                      customText: kFemaleText),
+                      customIcon: kFemaleIcon, customText: kFemaleText),
                 ))
               ],
             ),
@@ -96,7 +96,6 @@ class _InputPageState extends State<InputPage> {
                     thumbColor: kBottomContainerColor,
                     thumbShape: RoundSliderThumbShape(enabledThumbRadius: 17),
                     overlayShape: RoundSliderOverlayShape(overlayRadius: 40),
-
                   ),
                   child: Slider(
                     value: height.toDouble(),
@@ -106,7 +105,7 @@ class _InputPageState extends State<InputPage> {
                     onChanged: (double newValue) {
                       setState(() {
                         height = newValue.toInt();
-                      });  
+                      });
                     },
                   ),
                 )
@@ -114,11 +113,44 @@ class _InputPageState extends State<InputPage> {
             ),
             colour: kReusableCardsColor,
           )),
-          const Expanded(
+          Expanded(
             child: Row(
               children: [
                 Expanded(
                     child: ReusableCard(
+                  cardChild: Column(
+                    children: [
+                      Text(
+                        'POIDS',
+                        style: kLabeltextStyle,
+                      ),
+                      Text(
+                        weight.toString(),
+                        style: kNumberTextStyle,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          FloatingActionButton(
+                              backgroundColor: kBottomContainerColor,
+                              shape: CircleBorder(),
+                              child: Icon(
+                                Icons.add,
+                                color: Colors.white,
+                              ),
+                              onPressed: () {}),
+                          FloatingActionButton(
+                              backgroundColor: kBottomContainerColor,
+                              shape: CircleBorder(),
+                              child: Icon(
+                                Icons.add,
+                                color: Colors.white,
+                              ),
+                              onPressed: () {}),
+                        ],
+                      )
+                    ],
+                  ),
                   colour: kReusableCardsColor,
                 )),
                 Expanded(
