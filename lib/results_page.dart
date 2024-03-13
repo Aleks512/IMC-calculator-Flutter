@@ -8,7 +8,7 @@ class ResultsPage extends StatelessWidget {
    Widget build(BuildContext context) {
        return Scaffold(
            appBar: AppBar(title: const Text('IMC CALCULATOEUR'),),
-           body: Scaffold(),
+           body: const Scaffold(),
        );
   }
 }

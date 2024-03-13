@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'custom_col_content.dart';
 import 'reusable_cart.dart';
@@ -202,14 +201,20 @@ class _InputPageState extends State<InputPage> {
           GestureDetector(
             onTap: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => ResultsPage()));
+                  MaterialPageRoute(builder: (context) => const ResultsPage()));
             },
             child: Container(
-              child: Text('CALCULER'),
               color: kBottomContainerColor,
               margin: const EdgeInsets.only(top: 10.0),
+              padding: EdgeInsets.only(bottom: 10),
               width: double.infinity,
               height: kBottomContainerHeight,
+              child: const Center(
+                child: Text(
+                  'CALCULER',
+                  style: kLargrButtonTextStyle,
+                ),
+              ),
             ),
           )
         ],

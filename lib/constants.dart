@@ -16,3 +16,6 @@ const kNumberTextStyle = TextStyle(
   fontWeight: FontWeight.w900,
   fontSize: 50,
 );
+
+const kLargrButtonTextStyle =
+    TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: kReusableCardsColor);
