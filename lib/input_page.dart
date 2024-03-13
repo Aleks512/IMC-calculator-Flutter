@@ -200,7 +200,7 @@ class _InputPageState extends State<InputPage> {
           ),
           GestureDetector(
             onTap: () {
-              
+              Navigator.push(context, route)
             },
             child: Container(
               child: Text('CALCULER'),
