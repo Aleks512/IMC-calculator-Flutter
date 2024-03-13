@@ -4,6 +4,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'custom_col_content.dart';
 import 'reusable_cart.dart';
 import 'constants.dart';
+import 'results_page.dart';
 
 // use enum instead of int when u have more then 1 options
 enum Gender { male, female } // 1 enum declaration
@@ -200,9 +201,8 @@ class _InputPageState extends State<InputPage> {
           ),
           GestureDetector(
             onTap: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) {
-                return 
-              }))
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => ResultsPage()));
             },
             child: Container(
               child: Text('CALCULER'),
