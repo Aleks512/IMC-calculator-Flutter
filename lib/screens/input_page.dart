@@ -6,6 +6,7 @@ import '../constants.dart';
 import 'results_page.dart';
 import '../components/rounded_icon_btn.dart';
 import '../components/bottom_btn.dart';
+import '../calculator.dart';
 
 // use enum instead of int when u have more then 1 options
 enum Gender { male, female } // 1 enum declaration
@@ -202,8 +203,14 @@ class _InputPageState extends State<InputPage> {
           ),
           BigYellowBotton(
             onTap: () {
+              Calculator calculator = Calculator(height: height, weight: weight);
+
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => ResultsPage()));
+                  MaterialPageRoute(builder: (context) => ResultsPage(
+                    imcResult: calculator.calculateIMC(),
+                    textResult: calculator.getResult(),
+                    textInterpretation: calculator.getInterpretation(),
+                  )));
             },
             BtnText: 'CALCULER',
           )

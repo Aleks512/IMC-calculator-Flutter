@@ -2,9 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:imc_calculateur/components/reusable_cart.dart';
 import '../constants.dart';
 import 'package:imc_calculateur/components/bottom_btn.dart';
+import '../calculator.dart';
 
 class ResultsPage extends StatelessWidget {
-  const ResultsPage({super.key});
+  //1. <Add proprieties to be able to pass them to constructor and the use it here and in input_page while navigation
+  final String imcResult;
+  final String textResult;
+  final String textInterpretation;
+  const ResultsPage({super.key, required this.imcResult, required this.textResult, required this.textInterpretation});
 
   @override
   Widget build(BuildContext context) {
