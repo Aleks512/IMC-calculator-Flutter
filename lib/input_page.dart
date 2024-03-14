@@ -4,6 +4,7 @@ import 'custom_col_content.dart';
 import 'reusable_cart.dart';
 import 'constants.dart';
 import 'results_page.dart';
+import 'rounded_icon_btn.dart';
 import 'bottom_btn.dart';
 
 // use enum instead of int when u have more then 1 options
@@ -214,23 +215,3 @@ class _InputPageState extends State<InputPage> {
 
 // Color(0xFF1D1E33)
 
-class RoundIconButton extends StatelessWidget {
-  final Function onPressed;
-  final IconData? icon;
-  const RoundIconButton({super.key, this.icon, required this.onPressed});
-
-  @override
-  Widget build(BuildContext context) {
-    return RawMaterialButton(
-      elevation: 7,
-      constraints: const BoxConstraints.tightFor(
-        width: 56,
-        height: 56,
-      ),
-      shape: const CircleBorder(),
-      fillColor: kBottomContainerColor,
-      onPressed: onPressed as void Function(),
-      child: Icon(icon),
-    );
-  }
-}
