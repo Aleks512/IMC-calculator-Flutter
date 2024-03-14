@@ -206,9 +206,7 @@ class _InputPageState extends State<InputPage> {
 }
 
 class BigYellowBotton extends StatelessWidget {
-  const BigYellowBotton({
-    super.key,
-  });
+
 
   @override
   Widget build(BuildContext context) {
