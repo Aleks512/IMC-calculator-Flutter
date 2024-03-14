@@ -37,14 +37,14 @@ class ResultsPage extends StatelessWidget {
                 children: [
                   Center(
                     child: Text(
-                      'Normal',
+                      textResult,
                       style: kResultTextStyle,
                     ),
                   ),
                   Center(
-                    child: Text("18.5", style: kResultNumbertextStyle),
+                    child: Text(imcResult, style: kResultNumbertextStyle),
                   ),
-                  Text('Votre IMC est trop bas. Vous devriez manger mieux',
+                  Text(textInterpretation,
                       style: kRecommendationTextStyle,
                       textAlign: TextAlign.center),
                 ],
