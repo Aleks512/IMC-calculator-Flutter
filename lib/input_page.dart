@@ -4,6 +4,7 @@ import 'custom_col_content.dart';
 import 'reusable_cart.dart';
 import 'constants.dart';
 import 'results_page.dart';
+import 'bottom_btn.dart';
 
 // use enum instead of int when u have more then 1 options
 enum Gender { male, female } // 1 enum declaration
@@ -198,38 +199,14 @@ class _InputPageState extends State<InputPage> {
               ],
             ),
           ),
-          BigYellowBotton()
+          BigYellowBotton(
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => ResultsPage()));
+            },
+            BtnText: 'CALCULER',
+          )
         ],
-      ),
-    );
-  }
-}
-
-class BigYellowBotton extends StatelessWidget {
-  final Function onTap;
-  final String BtnText;
-
-  BigYellowBotton({required this.onTap, required this.BtnText})
-
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        Navigator.push(context,
-            MaterialPageRoute(builder: (context) => const ResultsPage()));
-      },
-      child: Container(
-        color: kBottomContainerColor,
-        margin: const EdgeInsets.only(top: 10.0),
-        padding: EdgeInsets.only(bottom: 10),
-        width: double.infinity,
-        height: kBottomContainerHeight,
-        child: const Center(
-          child: Text(
-            'CALCULER',
-            style: kLargrButtonTextStyle,
-          ),
-        ),
       ),
     );
   }
