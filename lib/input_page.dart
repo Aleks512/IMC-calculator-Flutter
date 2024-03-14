@@ -206,7 +206,8 @@ class _InputPageState extends State<InputPage> {
 }
 
 class BigYellowBotton extends StatelessWidget {
-
+  final Function onTap;
+  final String? BtnText;
 
   @override
   Widget build(BuildContext context) {
