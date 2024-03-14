@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'custom_col_content.dart';
-import 'reusable_cart.dart';
-import 'constants.dart';
+import '../components/custom_col_content.dart';
+import '../components/reusable_cart.dart';
+import '../constants.dart';
 import 'results_page.dart';
-import 'rounded_icon_btn.dart';
-import 'bottom_btn.dart';
+import '../components/rounded_icon_btn.dart';
+import '../components/bottom_btn.dart';
 
 // use enum instead of int when u have more then 1 options
 enum Gender { male, female } // 1 enum declaration

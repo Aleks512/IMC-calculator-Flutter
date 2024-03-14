@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:imc_calculateur/reusable_cart.dart';
-import 'constants.dart';
+import 'package:imc_calculateur/components/reusable_cart.dart';
+import '../constants.dart';
 
 class ResultsPage extends StatelessWidget {
   const ResultsPage({super.key});
