@@ -198,26 +198,37 @@ class _InputPageState extends State<InputPage> {
               ],
             ),
           ),
-          GestureDetector(
-            onTap: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const ResultsPage()));
-            },
-            child: Container(
-              color: kBottomContainerColor,
-              margin: const EdgeInsets.only(top: 10.0),
-              padding: EdgeInsets.only(bottom: 10),
-              width: double.infinity,
-              height: kBottomContainerHeight,
-              child: const Center(
-                child: Text(
-                  'CALCULER',
-                  style: kLargrButtonTextStyle,
-                ),
-              ),
-            ),
-          )
+          BigYellowBotton()
         ],
+      ),
+    );
+  }
+}
+
+class BigYellowBotton extends StatelessWidget {
+  const BigYellowBotton({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(context,
+            MaterialPageRoute(builder: (context) => const ResultsPage()));
+      },
+      child: Container(
+        color: kBottomContainerColor,
+        margin: const EdgeInsets.only(top: 10.0),
+        padding: EdgeInsets.only(bottom: 10),
+        width: double.infinity,
+        height: kBottomContainerHeight,
+        child: const Center(
+          child: Text(
+            'CALCULER',
+            style: kLargrButtonTextStyle,
+          ),
+        ),
       ),
     );
   }
