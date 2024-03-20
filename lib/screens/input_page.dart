@@ -70,14 +70,15 @@ class _InputPageState extends State<InputPage> {
             ),
           ),
           Expanded(
-              child: ReusableCard(
+            child: ReusableCard(
             cardChild: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+              
               children: [
                 const Text(
-                  'HEIGHT',
+                  ' TAILLE',
                   style: kLabeltextStyle,
                 ),
+                 
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.baseline,
@@ -103,7 +104,7 @@ class _InputPageState extends State<InputPage> {
                     thumbShape:
                         const RoundSliderThumbShape(enabledThumbRadius: 17),
                     overlayShape:
-                        const RoundSliderOverlayShape(overlayRadius: 40),
+                        const RoundSliderOverlayShape(overlayRadius: 30),
                   ),
                   child: Slider(
                     value: height.toDouble(),
