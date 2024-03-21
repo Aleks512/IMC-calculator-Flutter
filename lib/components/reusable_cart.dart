@@ -9,6 +9,7 @@ class ReusableCard extends StatelessWidget {
   //final Function onPress; on ne peut plus le faire
     // Utilisez VoidCallback ou void Function au lieu de Function
   final VoidCallback? onPress; //Changé pour VoidCallback? si onPress peut être null
+  
   const ReusableCard(
       {super.key,
       this.colour,

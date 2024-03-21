@@ -2,12 +2,6 @@
 
 A new Flutter project.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
 # IMC Calculateur
 
 Ce projet est une application de calcul de l'Indice de Masse Corporelle (IMC) développée en Dart avec le framework Flutter. L'IMC est un indicateur utilisé pour évaluer le poids corporel d'une personne en fonction de sa taille. Cette application permet à l'utilisateur de saisir sa taille, son poids et son âge pour obtenir son IMC ainsi qu'une évaluation de sa condition physique.
@@ -38,4 +32,4 @@ Le code source est divisé en plusieurs fichiers pour une meilleure organisation
 
 ---
 
-Ce projet a été développé avec passion par [Votre Nom] et est distribué sous licence MIT. Nous vous encourageons à contribuer en soumettant des suggestions, des rapports de bogues ou des demandes de fonctionnalités.
+Ce projet a été développé avec passion pour le bien etre et la santé. 

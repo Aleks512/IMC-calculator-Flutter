@@ -72,7 +72,6 @@ class _InputPageState extends State<InputPage> {
           Expanded(
             child: ReusableCard(
             cardChild: Column(
-              
               children: [
                 const Text(
                   ' TAILLE',
