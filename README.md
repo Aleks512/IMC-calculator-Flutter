@@ -22,6 +22,10 @@ Le code source est divisé en plusieurs fichiers pour une meilleure organisation
 - **`btn.dart` :** Widget personnalisé pour le bouton de grande taille utilisé dans l'application.
 - **`reusable_cart.dart` :** Widget réutilisable pour les cartes affichées sur l'écran principal.
 
+## Démo
+
+![IMC Calculateur](assets/untitled.gif)
+
 ## Installation
 
 1. Assurez-vous d'avoir Flutter installé sur votre système.
@@ -32,4 +36,4 @@ Le code source est divisé en plusieurs fichiers pour une meilleure organisation
 
 ---
 
-Ce projet a été développé avec passion pour le bien etre et la santé. 
+Ce projet a été développé avec passion pour le bien-être et la santé.
