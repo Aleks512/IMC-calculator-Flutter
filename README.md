@@ -24,7 +24,7 @@ Le code source est divisé en plusieurs fichiers pour une meilleure organisation
 
 ## Démo
 
-![IMC Calculateur](assets/untitled.gif)
+<img src="assets/untitled.gif" alt="IMC Calculateur" style="width: 30%;">
 
 ## Installation
 
